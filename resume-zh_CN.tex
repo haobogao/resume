@@ -1,0 +1,111 @@
+\documentclass[a4paper,8pt,oneside]{resume}
+\setmainfont{Ubuntu}
+\usepackage{xeCJK}
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=green]{hyperref}
+\usepackage{listings}
+ \lstset{
+	numbers=left,
+	numberstyle=\tiny,
+	basicstyle=\footnotesize,
+	backgroundcolor= \color{gray},
+	keywordstyle=\color{blue!70},
+	breaklines=true,
+	breakautoindent=true,
+	breakindent=4em,
+	commentstyle=\color{red!50!green!50!blue50}
+	frame=shadowbox,
+	framextopmargin=1pt,framexbottommargin=1pt,abovecaptionskip=-1pt,belowcaptionskip=1pt,
+	xleftmargin=1em,xrightmargin=1em,
+	language=C	
+}
+  
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{高浩博}
+% {E-mail}{mobilephone}{homepage}
+\contactInfo{goal.haobo@gmail.com}{(+86)17729734085 }{http://www.vample.info}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{河南科技大学},信息工程 }{2014 -- 2018}
+\textit{全日制本科}
+信息工程系,软件工程专业
+
+\section{\faUsers\ 实习/项目经历}
+\datedsubsection{\textbf{洛阳市恒生杯全国大学生机器人大赛}}{2015年11月 -- 2016年3月}
+\role{pwm舵机,syn6288 语音模块 }{团队项目}
+
+\datedsubsection{\textbf{毕业设计}}{2017年12月 -- 2018年6月}
+\role{zigbee, TICC2530}{个人项目}
+
+
+\datedsubsection{\textbf{汉威光电股份有限公司} ,郑州}{2017年9月 -- 2018年6月}
+\role{嵌入式软件工程师}{STM32F207,STM32F407}
+
+主要的成果如下：
+\begin{itemize}
+  \item 优化了内存使用，缓解了内存紧张，为新平台的引入缓解了时间。
+  \item 根据高内聚,低耦合的思想， 优化了code，写了一些功能性的接口,添加详细注释，使软件有了框架。引入了大量的数据结构，面向对象的思想，让代码更加容易理解。
+  \item 完成了通过文本配置文件（人类可读），启动读取屏参，设置运行参数的设计和实现。
+  \item lwip  TCP  socket 通讯。
+  \item 上位机程序 ，基于C\# 开发了串口上位机。控制调试串口。
+  \item 插播播放表功能的设计和实现
+  使用kernel 参照 list.h 以及面向对象的思想，把一个播放任务使用一个结构体来描述，当有插播时，会形成链表。 这样实现切换内容。
+  \item 雾区诱导系统的研发
+\end{itemize}
+
+\datedsubsection{\textbf{富士康郑州研发中心（ZZDC）} ,郑州}{2018年7月 -- 2019年3月}
+\role{BSP驱动工程师}{平台:msm8937,sdm660,sdm710}
+\begin{itemize}
+  \item 参与boot 部分的debug，和porting. 关键词，uefi,lk，boot\_image, edk2,bootable.实际参与过 Performance debug, 和 android O 升 P boot 部分 porting
+  \item 研究 各种平台 的boot 流程。
+  \item 研究编译脚本。shell python
+  \item 评估和研发单片机项目。
+  在室内定位项目上，为了评估uwb 模组的定位准确性，写了一个linux 平台下的 串口数据向服务器上报的例程，这个例程实现了linux 从串口接收数据，然后
+  使用tcp 上传到服务器。请参考： \href{https://github.com/haobogao/mid_report}{ 点我 }  
+  
+\end{itemize}
+
+\datedsubsection{\textbf{个人项目}}{2015年5月 -- 至今}
+\role{uboot,linux driver}{个人项目}
+\begin{onehalfspacing}
+个人利用空余时间 在2440 平台。 对自己比较感兴趣的uboot 和 kernel 进行探索，主要是为了学习，所以产出较少：
+\begin{itemize}
+\item 当时写的一些2.6 kernel 的一些驱动: \href{https://github.com/haobogao/2440_drv}{ 点我 } 
+
+\item 当时写的一些 裸机code: \href{https://github.com/haobogao/2440_boot}{ 点我 } 
+
+\item 这个是18年12月 购买orangepi 后决定参照 lichee 编译系统 来改进 2440的编译，顺便练习shell,python .  https://github.com/haobogao/2440
+\end{itemize}
+\end{onehalfspacing}
+
+
+\section{\faCogs\  技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 编程语言: 熟练C语言，熟悉shell，makefile，C\#,C++,latex,了解 python,java，...
+  \item 开发: linux设备驱动，单片机开发，linux 应用开发，裸机开发，uboot
+  \begin{lstlisting}
+#define  熟练   使用熟练，开发中不需要时常查资料
+#define  熟悉   进行过相应的开发，开发时需要常查资料
+#define  了解	暂时不能进行开发，能读懂相应的code
+\end{lstlisting}
+\end{itemize}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item GitHub: https://github.com/haobogao
+  \item 语言: 英语 - 熟练(CET-4)
+\end{itemize}
+
+\section{求职意向及简单介绍}
+
+我在15年接触嵌入式，大学专业 软件工程。 在校期间曾经在学长的带领下完成智慧家居机器人的一些工作，大三，16年了解到linux,并投入精力自学之，曾看过LDD
+,LKD,understanding the linux kernel .这些书籍，对驱动开发的一些概念比较了解，有一年半以上的企业内嵌入式开发经验，个人比较喜欢linux kernel 相关的一些开发，并定位自己在不远的将来要精通linux 。
+我希望在一家重视技术的公司，拿着合乎我能力的薪资，快乐的钻研嵌入式linux技术。   
+
+
+\end{document}
